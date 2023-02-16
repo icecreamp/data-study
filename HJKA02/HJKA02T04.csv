@@ -1,0 +1,13 @@
+product_id,product_name,list_price,product_id,product_name,list_price
+1,"Fender Stratocaster",699.00,1,"Fender Stratocaster",699.00
+2,"Gibson Les Paul",1199.00,2,"Gibson Les Paul",1199.00
+3,"Gibson SG",2517.00,3,"Gibson SG",2517.00
+4,"Yamaha FG700S",489.99,4,"Yamaha FG700S",489.99
+5,"Washburn D10S",299.00,5,"Washburn D10S",299.00
+6,"Rodriguez Caballero 11",415.00,6,"Rodriguez Caballero 11",415.00
+10,"Tama 5-Piece Drum Set with Cymbals",799.99,7,"Fender Precision",799.99
+7,"Fender Precision",799.99,7,"Fender Precision",799.99
+8,"Hofner Icon",499.99,8,"Hofner Icon",499.99
+9,"Ludwig 5-piece Drum Set with Cymbals",699.99,9,"Ludwig 5-piece Drum Set with Cymbals",699.99
+10,"Tama 5-Piece Drum Set with Cymbals",799.99,10,"Tama 5-Piece Drum Set with Cymbals",799.99
+7,"Fender Precision",799.99,10,"Tama 5-Piece Drum Set with Cymbals",799.99

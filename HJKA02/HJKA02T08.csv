@@ -1,0 +1,8 @@
+p_id,project_name,parent_p_id,"Parent project name"
+1,"Hardware Support Intranet",NULL,NULL
+2,"Hardware Support Interface",1,"Hardware Support Intranet"
+3,"Hardware Support Database",1,"Hardware Support Intranet"
+4,"Teller Support System",NULL,NULL
+5,"Internet Advertising",NULL,NULL
+6,"Network Design",5,"Internet Advertising"
+7,"Exploration Database",NULL,NULL

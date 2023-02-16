@@ -1,0 +1,10 @@
+c_id,c_last,c_first,skill_id,skill_description
+100,Myers,Mark,1,"VB .NET Programming"
+103,Carlson,Sarah,1,"VB .NET Programming"
+105,Park,Janet,4,"Project Management"
+100,Myers,Mark,6,"Mobile Web Programming"
+103,Carlson,Sarah,6,"Mobile Web Programming"
+102,Zhang,Brian,7,"Database Administration"
+103,Carlson,Sarah,8,"Windows 2003 Network Administration"
+103,Carlson,Sarah,9,"Windows 2008 Network Administration"
+104,Courtlandt,Paul,9,"Windows 2008 Network Administration"
