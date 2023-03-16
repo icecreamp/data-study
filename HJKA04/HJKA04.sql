@@ -84,4 +84,85 @@ WHERE p_id IN (
   FROM project_consultant pc
   INNER JOIN consultant c ON pc.c_id = c.c_id
   WHERE c.c_last LIKE 'Z%'
-)
+);
+
+# Assignment 4: Task 3 - 1
+# Write ALTER TABLE that adds 'total_days' column to the project_consultant table
+# This should have a default value of 0 
+# Update the new column with the different of ROLL OFF and ROLL ON dates
+# Display all the contents of project_consultant table
+# Drop the 'total_days' column 
+-- USE swexpert;
+-- ALTER TABLE project_consultant
+-- ADD total_days INT DEFAULT(0);
+
+-- USE swexpert;
+-- UPDATE project_consultant
+-- SET total_days = DATEDIFF(roll_off_date, roll_on_date);
+
+-- SELECT * FROM swexpert.project_consultant;
+
+-- ALTER TABLE project_consultant
+-- DROP COLUMN total_days;
+
+# Assignment 4: Task 3 - 2
+# Create a new evaluation_audit table with these columns
+# audit_id(primary, atuo increase): integer / audit_e_id: NOT NULL / audit_score: int / audit_user: string (length of 20)
+# Insert a new row for consultant (e_id) 100 with a score of 90
+# Display all the contents of evaluation_audit table
+
+-- CREATE TABLE swexpert.evaluation_audit (
+-- audit_id INT AUTO_INCREMENT ,
+-- audit_e_id INT NOT NULL,
+-- audit_score INT,
+-- audit_user VARCHAR(20),
+-- PRIMARY KEY (audit_id)
+-- );
+
+-- INSERT INTO swexpert.evaluation_audit
+-- VALUES (DEFAULT, 100, 90, 'description');
+
+-- SELECT * FROM swexpert.evaluation_audit;
+
+# Assignment 4: Task 3 - 3
+# Assign empty string to audit_user column that have NULL values
+# Write a single ALTER TABLE statement that will disallow null values for the audit_user column
+# Write an ALTER TABLE statement that adds a new 'audit_date' column
+# Insert another row for consultant 100 with a score of 95 along with the current user and current date.
+# Display all the contents of evaluation_audit table
+# Write a negative test case by inserting a row for consultant 100 with a score of 99 with an unknown user and date
+
+-- USE swexpert;
+-- UPDATE evaluation_audit
+-- SET audit_user = ''
+-- WHERE audit_user IS NULL;
+
+-- USE swexpert;
+-- ALTER TABLE evaluation_audit
+-- MODIFY audit_user VARCHAR(20) NOT NULL;
+
+-- USE swexpert;
+-- ALTER TABLE evaluation_audit
+-- ADD audit_date DATE;
+
+-- USE swexpert;
+-- INSERT INTO evaluation_audit
+-- VALUE (DEFAULT, 100, 95, USER(), CURRENT_DATE());
+
+-- USE swexpert;
+-- SELECT * FROM evaluation_audit;
+
+-- USE swexpert;
+-- INSERT INTO evaluation_audit
+-- VALUES(DEFAULT, 100, 99, NULL, NULL);
+
+# Assignment 4: Task 3 - 4
+# Write a negative test case by inserting a new row with an unknown (NULL) skill_id to the project_skill table.
+-- USE swexpert;
+-- INSERT INTO project_skill
+-- VALUES(DEFAULT, NULL);
+
+# Assignment 4: Task 3 - 5
+#  Write a negative test case by deleting a row from the consultant table that will violate a foreign key constraint.
+USE swexpert;
+DELETE FROM consultant WHERE c_id = 100;
